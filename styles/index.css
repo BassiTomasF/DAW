@@ -1,0 +1,138 @@
+.Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.HeaderTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #000;
+}
+
+.HeaderNav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: solid 1px #000;
+}
+
+.HeaderNav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.HeaderNav li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-top: solid 1px #000;
+}
+
+.VideoContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.VideoContainer video {
+    display: none;
+}
+
+.GameWindow {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body.light {
+  background-color: #f5f5f5 !important;
+  color: #222 !important;
+}
+
+body.light #GameGrid .cell {
+  background-color: #ffffff !important;
+  border-color: #999 !important;
+}
+
+body.light #GameGrid .cell.revealed {
+  background-color: #e9e9e9 !important;
+}
+
+body.light #GameGrid .cell.flagged {
+  background-color: #ffdcdc !important;
+}
+
+body.light #ScoreboardModal {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #000 !important;
+  border-color: #666 !important;
+}
+
+body.light select,
+body.light input,
+body.light button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-color: #666 !important;
+}
+
+.ThemeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+    .VideoContainer video {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: -1;
+    }
+
+    .VideoContainer {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .GameWindow {
+        width: 50%;
+    }
+    
+}
